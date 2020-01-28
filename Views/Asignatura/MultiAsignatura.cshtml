@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Asignatura>
+
+@{
+    ViewData["Title"] = "Información Asignatura";
+    Layout = "Simple";
+}
+
+<strong>Desde la vista parcial</strong>
+
+@foreach(var asignatura in Model)
+{
+    @await Html.PartialAsync("ObjetoEscuelaSimple", asignatura)
+}
+
+<p><i>@ViewBag.Fecha</i></p>

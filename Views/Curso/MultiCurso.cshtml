@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Curso>
+
+@{
+    ViewData["Title"] = "Información Curso";
+    Layout = "Simple";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@await Html.PartialAsync("ListaObjetosEscuela")
+
+<p><i>@ViewBag.Fecha</i></p>
+
